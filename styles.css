@@ -1,39 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+h3 {
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
 .grid {
-    border: 1px solid black;
+    border: 2px solid #333;
+    border-radius: 5px;
     height: 180px;
     width: 180px;
     display: flex;
     flex-wrap: wrap;
+    margin: 20px auto;
+    background-color: #e0e7ff; /* Light blue background to simulate water */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .grid div {
     height: 20px;
     width: 20px;
+    box-sizing: border-box;
 }
 
+/* Ending Block */
 .ending-block {
-    background-color: red;
+    background-color: #ff5959; /* Bright red to indicate target */
+    border: 1px solid #ff3333;
+    border-radius: 3px;
 }
 
+/* Starting Block */
 .starting-block {
-    background-color: blue;
+    background-color: #4dabf7; /* Light blue to indicate starting point */
+    border: 1px solid #1e90ff;
+    border-radius: 3px;
 }
+
+/* Logs */
 .l1, .l2, .l3 {
-    background-color: brown;
+    background-color: #6d4c41; /* Brown color to simulate logs */
+    border: 1px solid #5d4037;
 }
 
 .l4, .l5 {
-    background-color: lightblue;
+    background-color: #8fcfff; /* Light blue to represent logs floating in water */
+    border: 1px solid #6abedb;
 }
 
+/* Cars */
 .c1 {
-    background-color: black;
+    background-color: #000; /* Black car */
+    border: 1px solid #333;
 }
 
-.c2, .c3 {
-    background-color: lightgrey;
+.c2 {
+    background-color: #d3d3d3; /* Light grey car */
+    border: 1px solid #aaa;
 }
 
+.c3 {
+    background-color: #7f8c8d; /* Darker grey car */
+    border: 1px solid #555;
+}
+
+/* Frog */
 .frog {
-    background-color: green;
+    background-color: #27ae60; /* Bright green frog */
+    border: 1px solid #1e8449;
+    border-radius: 50%; /* Make the frog circular */
+    animation: bounce 0.5s infinite alternate; /* Add a bouncing animation */
+}
+
+/* Frog Bounce Animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .grid {
+        transform: scale(0.8);
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
